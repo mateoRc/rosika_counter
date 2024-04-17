@@ -1,0 +1,41 @@
+BoxLayoutExample:
+
+<BoxLayoutExample>:
+    orientation: "vertical"
+    Button:
+        text: "PieChart"
+        size_hint: .5, .5
+        color: 0, 0, 1, 1
+        pos_hint: {"center_x": .5}
+    Button:
+        text: "TimeClock"
+        size_hint: .8, .2
+        color: 0, 0, 1, 1
+        pos_hint: {"center_x": .5}
+    BoxLayoutTimerButtons
+
+<BoxLayoutTimerButtons>:
+    Button:
+        text: "A"
+        size_hint: .8, .8
+        color: 0, 0, 1, 1
+        on_press: root.on_button_click("LEFT")
+    Button:
+        text: "B"
+        size_hint: .8, .8
+        color: 1, 0, 0, 1
+        on_press: root.on_button_click("RIGHT")
+
+
+<MainWidget>:
+    Button:
+        text: "Hello"
+        size: "100dp", "80dp"
+        pos : "100dp", "200dp"
+        color: 0, 0, 1, 1
+    Button:
+        text: "World"
+        size: "100dp", "80dp"
+        pos : "200dp", "300dp"
+        color: 1, 0, 0, 1
+
