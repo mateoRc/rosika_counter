@@ -1,6 +1,7 @@
 import time
 from rosika_2025.repository import timer_repo
 from rosika_2025.service.timer import Timer
+from rosika_2025.service.event import Event
 
 timer = Timer()
 
@@ -21,11 +22,7 @@ class TimerService:
         else:
             raise Exception("dude")
         self.pressed_button = button_id
-        timer_repo.store_btn_clicked_event(Event(button_id, timestamp))
+        timer_repo.store_btn_clicked_event(Event(button_id, timestamp, False))
         timer.start_timer(button_id)
 
 
-class Event:
-    def __init__(self, btn_id, timestamp):
-        self.button_id = btn_id
-        self.timestamp = timestamp
