@@ -1,7 +1,6 @@
 from kivy.app import App
-from kivy.uix.widget import Widget
 from kivy.uix.boxlayout import BoxLayout
-from rosika_2025.service import timer_service
+from rosika_2025.service.timer_service import TimerService
 from rosika_2025.database.database import SQLiteDatabase
 from rosika_2025.config.config import Configuration
 
@@ -12,8 +11,12 @@ class RosikaApp(App):
     SQLiteDatabase().init_db()
 
     class BoxLayoutTimerButtons(BoxLayout):
+        def __init__(self, **kwargs):
+            super().__init__(**kwargs)
+            self.timer_service = TimerService()
+
         def on_button_click(self, pos):
-            timer_service.button_clicked(pos)
+            self.timer_service.button_clicked(pos)
 
     class BoxLayoutExample(BoxLayout):
         pass

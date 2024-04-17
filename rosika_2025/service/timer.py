@@ -34,6 +34,7 @@ class Timer:
             self.stop_timer()
         self.timer_running = True
         self.timer_thread = threading.Thread(target=self._run_timer)
+        self.timer_thread.daemon = True
         self.current_button = button_id
         print("timer started!")
         self.timer_thread.start()
