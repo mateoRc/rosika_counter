@@ -1,5 +1,6 @@
 import threading
 
+
 class ResultScheduler:
     _instance = None
     _lock = threading.Lock()
@@ -15,4 +16,9 @@ class ResultScheduler:
     def __init__(self):
         if not self._initialized:
             self._initialized = True
+            self.url = "some url"
             print("timer initialized...")
+
+    def start(self):
+        print(self.url)
+        print("msg sent")
