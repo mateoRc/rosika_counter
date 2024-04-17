@@ -12,5 +12,5 @@ class SQLiteDatabase:
         self.conn.execute('''CREATE TABLE IF NOT EXISTS events
                               (id INTEGER PRIMARY KEY AUTOINCREMENT,
                               button_id TEXT,
-                              button_color TEXT,
-                              timestamp DATETIME DEFAULT CURRENT_TIMESTAMP)''')
+                              timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+                              sent BOOLEAN)''')

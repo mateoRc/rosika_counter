@@ -18,7 +18,7 @@ class RosikaApp(App):
         def on_button_click(self, pos):
             self.timer_service.button_clicked(pos)
 
-    class BoxLayoutExample(BoxLayout):
+    class MainView(BoxLayout):
         pass
 
 
