@@ -59,6 +59,6 @@ class Timer:
         self.timer_running = False
         if self.seconds == 0:
             self.timer_completed = True
-        print(self.timer_running)
-        print(self.timer_completed)
+        print("running: " + str(self.timer_running))
+        print("completed: " + str(self.timer_completed))
         print("Timer finished!")

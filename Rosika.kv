@@ -7,11 +7,7 @@ MainView:
         size_hint: .5, .5
         color: 0, 0, 1, 1
         pos_hint: {"center_x": .5}
-    Button:
-        text: "TimeClock"
-        size_hint: .8, .2
-        color: 0, 0, 1, 1
-        pos_hint: {"center_x": .5}
+    TimerFieldExample
     BoxLayoutTimerButtons
 
 <BoxLayoutTimerButtons>:
@@ -39,3 +35,10 @@ MainView:
         pos : "200dp", "300dp"
         color: 1, 0, 0, 1
 
+<TimerFieldExample@Label>:
+    id: "timer_label"
+    text: "600"
+    multiline: False
+    size_hint: .8, .2
+    color: 0, 1, 1, 1
+    pos_hint: {"center_x": .5}
