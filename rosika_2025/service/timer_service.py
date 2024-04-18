@@ -52,6 +52,6 @@ class TimerService:
                 # if self.points >= MAX_POINTS:
                 #     break
 
-                timer_repo.store_points_event
+                timer_repo.store_points_event(Event(None, None, None, None))
 
             time.sleep(5)
